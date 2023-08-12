@@ -1,0 +1,51 @@
+@use 'index' as *;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%;
+}
+body {
+    font-family: sans-serif;
+    color: #000;
+}
+.wrapper {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+}
+.nav-desktop {
+	display: none;
+}
+.nav-mobile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30vh;
+	font-size: 2em;
+	background-color: #8a8a8a;
+	transform: translateY(-101%);
+	transition: transform 0.3s;
+	.mobile-nav-list {
+		.nav-mobile-list-item {
+			padding: 0.3em;
+			list-style: none;
+			text-transform: uppercase;
+			text-decoration: solid;
+			text-align: center;
+			a {
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+	}
+}
+.mobile-active {
+	transform: translateY(0);
+}
+@include large;
