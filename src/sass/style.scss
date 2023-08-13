@@ -16,6 +16,10 @@ body {
 	color: #000;
 	overflow: hidden;
 }
+.padding {
+	padding: 1em 2em;
+	text-align: center;
+}
 .wrapper {
 	max-width: 1200px;
 	width: 100%;
@@ -109,6 +113,15 @@ body {
 			.hero-title {
 				font-size: 1.55em;
 			}
+		}
+	}
+}
+.main {
+	.aboutus {
+		.heading {
+			font-size: 2em;
+			text-transform: uppercase;
+			font-weight: normal
 		}
 	}
 }
