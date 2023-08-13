@@ -44,7 +44,7 @@
 				.nav-desktop-list-item::before {
                     content: '';
 					position: absolute;
-					bottom: 0;
+					bottom: -10%;
 					left: 0;
 					width: 100%;
                     height: 0;
@@ -53,11 +53,29 @@
                     z-index: -5;
 				}
                 .nav-desktop-list-item:hover::before {
-                    height: 100%;
+                    height: 121%;
                 }
                 .nav-desktop-list-item:hover a {
                     color: #fff;
                 }
+			}
+		}
+		.header {
+			.hero {
+				.hero-img {
+					height: 50vh;
+					background-image: url(/dist/img/jungle-desktop.jpg);
+				}
+				.hero-bg {
+					.hero-text {
+						max-width: 1200px;
+						width: 100%;
+						text-align-last: left;
+						.hero-heading {
+							font-size: 3em;
+						}
+					}
+				}
 			}
 		}
 	}

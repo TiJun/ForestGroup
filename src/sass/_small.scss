@@ -1,0 +1,26 @@
+@mixin small {
+    @media (max-width: 576px) {
+        .nav-mobile {
+            .mobile-nav-list {
+                font-size: 1.5em;
+            }
+        }
+        .header {
+            .hero {
+                .hero-img {
+                    height: 50vh;
+                }
+                .hero-bg {
+                    .hero-text {
+                        .hero-title {
+                            font-size: 1.1em;
+                        }
+                        .hero-heading {
+                            font-size: 1.5em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

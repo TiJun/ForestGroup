@@ -1,0 +1,11 @@
+@mixin medium {
+    @media (min-width: 576px) {
+        .header {
+            .hero {
+                .hero-img {
+                    height: 30vh;
+                }
+            }
+        }
+    }
+}
