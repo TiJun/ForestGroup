@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta description="Forest Group - Najpiękniejszy park w twojej okolicy!">
+    <meta name="description" content="Forest Group - Najpiękniejszy park w twojej okolicy!">
     <title>Forest Group</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dist/css/hamburger.min.css">
     <link rel="stylesheet" href="/dist/css/style.min.css">
     <script src="https://unpkg.com/feather-icons"></script>
@@ -21,7 +24,7 @@
         <ul class="mobile-nav-list">
             <div class="nav-logo"><img class="logo-img" src="/dist/img/tree.png" alt=""><span>Forest</span></div>
             <li class="nav-mobile-list-item"><a href="#header">Home</a></li>
-            <li class="nav-mobile-list-item"><a href="">O nas</a></li>
+            <li class="nav-mobile-list-item"><a href="#aboutus">O nas</a></li>
             <li class="nav-mobile-list-item"><a href="">Oferta</a></li>
             <li class="nav-mobile-list-item"><a href="">Kontakt</a></li>
         </ul>
@@ -30,7 +33,7 @@
         <div class="nav-logo"><img class="logo-img" src="/dist/img/tree.png" alt=""><span>Forest</span></div>
         <ul class="desktop-nav-list">
             <li class="nav-desktop-list-item"><a href="#header">Home</a></li>
-            <li class="nav-desktop-list-item"><a href="">O nas</a></li>
+            <li class="nav-desktop-list-item"><a href="#aboutus">O nas</a></li>
             <li class="nav-desktop-list-item"><a href="">Oferta</a></li>
             <li class="nav-desktop-list-item"><a href="">Kontakt</a></li>
         </ul>
@@ -46,24 +49,31 @@
             </div>
         </div>
     </header>
-    <div class="main" id="main">
-        <section class="aboutus" id="aboutus">
-            <h2 class="heading padding">O nas</h2>
-            <div class="aboutus-content">
-                <div class="aboutus-img"></div>
-                <div class="aboutus-text">
-                    <h3 class="title">Niezapomniane przygody</h3>
-                    <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptatibus eveniet
-                        pariatur ullam temporibus et quod! Velit, perspiciatis necessitatibus! Corrupti natus ratione
-                        amet,
-                        vel, labore, minus est consectetur porro dicta non fuga eius deleniti consequuntur sit! Repellat
-                        soluta molestias ut distinctio maxime, voluptates, cupiditate enim rerum molestiae beatae quas
-                        placeat! Reiciendis nam officia, rerum impedit, ullam eveniet perspiciatis nulla iure ratione
-                        nobis
-                        molestias tempore, dolor repellat delectus suscipit quod!</p>
+    <div class="wrapper">
+        <main class="main" id="main">
+            <section class="aboutus" id="aboutus">
+                <h2 class="heading padding">O nas</h2>
+                <div class="aboutus__content">
+                    <div class="aboutus__img"></div>
+                    <div class="aboutus__text">
+                        <h3 class="title padding">Niezapomniane przygody</h3>
+                        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptatibus
+                            eveniet
+                            pariatur ullam temporibus et quod! Velit, perspiciatis necessitatibus! Corrupti natus
+                            ratione
+                            amet,
+                            vel, labore, minus est consectetur porro dicta non fuga eius deleniti consequuntur sit!
+                            Repellat
+                            soluta molestias ut distinctio maxime, voluptates, cupiditate enim rerum molestiae beatae
+                            quas
+                            placeat! Reiciendis nam officia, rerum impedit, ullam eveniet perspiciatis nulla iure
+                            ratione
+                            nobis
+                            molestias tempore, dolor repellat delectus suscipit quod!</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
     </div>
     <section style="height: 100vh"></section>
     <script src="/dist/js/script.min.js"></script>

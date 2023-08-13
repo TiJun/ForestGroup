@@ -1,9 +1,28 @@
 @mixin medium {
-    @media (min-width: 576px) {
+    @media (min-width: 768px) {
         .header {
             .hero {
                 .hero-img {
                     height: 30vh;
+                }
+            }
+        }
+        .main {
+            .aboutus {
+                .heading {
+                    font-size: 3rem;
+                }
+                &__content {
+                    padding: 0.5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                &__img {
+                    width: 50%;
+                }
+                &__text {
+                    width: 50%;
                 }
             }
         }

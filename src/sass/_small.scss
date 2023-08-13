@@ -13,11 +13,26 @@
                 .hero-bg {
                     .hero-text {
                         .hero-title {
-                            font-size: 1.1em;
+                            font-size: 2rem;
                         }
                         .hero-heading {
-                            font-size: 1.5em;
+                            font-size: 2.5rem;
                         }
+                    }
+                }
+            }
+        }
+        .main {
+            .aboutus {
+                .heading {
+                    font-size: 3rem;
+                }
+                &__text {
+                    .title {
+                        font-size: 2.5rem;
+                    }
+                    .text {
+                        font-size: 1.5rem;
                     }
                 }
             }
