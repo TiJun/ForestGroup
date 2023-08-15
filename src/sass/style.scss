@@ -27,17 +27,39 @@ body {
 }
 .hamburger {
 	position: sticky;
-	top: 0;
-	background-color: #00000068;
-	border-radius: 10px;
+	top: 0px;
 	z-index: 50;
 	touch-action: none;
+	background-color: #000;
 }
 .nav-desktop {
 	display: none;
 }
+.burger-box {
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	background-color: #fff;
+	z-index: 10;
+	.nav-logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		span {
+			font-size: 3rem;
+		}
+		.logo-img {
+			width: 5rem;
+			height: 5rem;
+		}
+	}
+}
 .nav-mobile {
 	touch-action: none;
+	z-index: -1;
 	.nav-logo {
 		display: flex;
 		justify-content: center;
@@ -63,7 +85,7 @@ body {
 		flex-direction: column;
 		font-size: 2rem;
 		backdrop-filter: blur(8px);
-		background-color: #fff;
+		background-color: #00000028;
 		transform: translateX(-101%);
 		transition: transform 0.3s;
 		z-index: 1;
@@ -75,7 +97,7 @@ body {
 			text-align: center;
 			a {
 				margin-right: 0.5rem;
-				color: #000;
+				color: #fff;
 				font-weight: bold;
 				text-decoration: none;
 			}
@@ -176,7 +198,7 @@ body {
 		font-size: 1.8rem;
 		text-align: center;
 		border: 1px solid #fff;
-		z-index: 5;
+		z-index: 0;
 	}
 }
 .offers {
