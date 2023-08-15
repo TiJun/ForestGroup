@@ -150,34 +150,34 @@ body {
 	.hero {
 		position: relative;
 	}
-		&__hero-img {
-			height: 30vh;
-			width: 100%;
-			background-image: url(/dist/img/girl-mobile.jpg);
-			background-size: cover;
-			background-position: center;
-		}
-		&__hero-bg {
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			background-color: rgba(0, 0, 0, 0.405);
-		}
-		&__text {
-			position: absolute;
-			width: 80%;
-			padding: 1.5rem 2rem;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			color: #fff;
-			font-size: 1.8rem;
-			text-align: center;
-			border: 1px solid #fff;
-			z-index: 5;
-		}
+	&__hero-img {
+		height: 30vh;
+		width: 100%;
+		background-image: url(/dist/img/girl-mobile.jpg);
+		background-size: cover;
+		background-position: center;
+	}
+	&__hero-bg {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(0, 0, 0, 0.405);
+	}
+	&__text {
+		position: absolute;
+		width: 80%;
+		padding: 1.5rem 2rem;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: #fff;
+		font-size: 1.8rem;
+		text-align: center;
+		border: 1px solid #fff;
+		z-index: 5;
+	}
 }
 .offers {
 	text-align: center;
@@ -188,7 +188,7 @@ body {
 		text-transform: uppercase;
 	}
 	&__text {
-		padding: 2rem .5rem 4rem .5rem;
+		padding: 2rem 0.5rem 4rem 0.5rem;
 		font-size: 1.8rem;
 	}
 	&__btn {
@@ -200,7 +200,57 @@ body {
 		text-decoration: none;
 		font-size: 2rem;
 		box-shadow: 3px 2px 11px 2px #2adf73;
-		transition: box-shadow .3s;
+		transition: box-shadow 0.3s;
+	}
+}
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	margin: 4rem 0 0 0;
+	background-color: #ddd;
+	&__logo {
+		.nav-logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.logo-img {
+				height: 5rem;
+				width: 5rem;
+			}
+		}
+		span {
+			font-size: 3rem;
+		}
+	}
+	&__heading {
+		padding: 1rem 0;
+		font-size: 2.5rem;
+	}
+	&__list-item {
+		padding: 0.5rem 0;
+		font-size: 1.5rem;
+		list-style: none;
+		a {
+			text-decoration: none;
+			text-transform: uppercase;
+			color: #000;
+		}
+	}
+	&__links {
+		margin-left: 1rem;
+	}
+	&__bottom {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		border-top: 1px solid black;
+		font-size: 1.5rem;
+		&-text {
+			padding: 1rem 0;
+		}
 	}
 }
 @include small;
