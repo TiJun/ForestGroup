@@ -123,7 +123,7 @@ body {
 .main {
 	.aboutus {
 		.heading {
-			font-size: 2rem;
+			font-size: 2.5rem;
 			text-transform: uppercase;
 			font-weight: normal;
 		}
@@ -135,13 +135,13 @@ body {
 		}
 		&__text {
 			padding: 1rem;
-			.title {
-				font-size: 2rem;
-				text-align: center;
-			}
 			.text {
 				font-size: 1.5rem;
 			}
+		}
+		&__title {
+			font-size: 1.8rem;
+			text-align: center;
 		}
 	}
 }
@@ -149,14 +149,15 @@ body {
 	padding: 3rem 0;
 	.hero {
 		position: relative;
-		.hero-img {
+	}
+		&__hero-img {
 			height: 30vh;
 			width: 100%;
 			background-image: url(/dist/img/girl-mobile.jpg);
 			background-size: cover;
 			background-position: center;
 		}
-		.hero-bg {
+		&__hero-bg {
 			position: absolute;
 			top: 0;
 			bottom: 0;
@@ -164,7 +165,7 @@ body {
 			right: 0;
 			background-color: rgba(0, 0, 0, 0.405);
 		}
-		.text {
+		&__text {
 			position: absolute;
 			width: 80%;
 			padding: 1.5rem 2rem;
@@ -177,6 +178,29 @@ body {
 			border: 1px solid #fff;
 			z-index: 5;
 		}
+}
+.offers {
+	text-align: center;
+	padding: 0;
+	&__heading {
+		font-size: 3rem;
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+	&__text {
+		padding: 2rem .5rem 4rem .5rem;
+		font-size: 1.8rem;
+	}
+	&__btn {
+		padding: 1.5rem 3rem;
+		background-color: #2adf73;
+		border-radius: 8px;
+		color: #000;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-size: 2rem;
+		box-shadow: 3px 2px 11px 2px #2adf73;
+		transition: box-shadow .3s;
 	}
 }
 @include small;

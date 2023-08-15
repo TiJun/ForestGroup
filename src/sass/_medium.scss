@@ -1,37 +1,49 @@
 @mixin medium {
-    @media (min-width: 768px) {
-        .header {
-            .hero {
-                .hero-img {
-                    height: 30vh;
+	@media (min-width: 768px) {
+		.header {
+			.hero {
+				.hero-img {
+					height: 30vh;
+				}
+			}
+		}
+		.main {
+			.aboutus {
+				.heading {
+					font-size: 3rem;
+				}
+				&__content {
+					padding: 0.5rem;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+				&__img {
+					width: 50%;
+				}
+				&__text {
+					width: 50%;
+				}
+                &__title {
+                    font-size: 2.2em;
                 }
+			}
+		}
+		.family {
+			&__text {
+				font-size: 3rem;
+			}
+		}
+        .offers {
+            &__heading {
+                font-size: 5rem;
+            }
+            &__text {
+                font-size: 3rem;
+            }
+            &__btn {
+                font-size: 4rem;
             }
         }
-        .main {
-            .aboutus {
-                .heading {
-                    font-size: 3rem;
-                }
-                &__content {
-                    padding: 0.5rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-                &__img {
-                    width: 50%;
-                }
-                &__text {
-                    width: 50%;
-                }
-            }
-        }
-            .family {
-                .hero {
-                    .text {
-                        font-size: 3rem;
-                    }
-                }
-        }
-    }
+	}
 }
