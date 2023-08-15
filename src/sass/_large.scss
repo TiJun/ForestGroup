@@ -122,5 +122,18 @@
                 }
             }
         }
+		.family {
+			padding: 8rem 0;
+			.hero {
+				.hero-img {
+					height: 40vh;
+					background-image: url(/dist/img/girl-desktop.jpg);
+				}
+				.text {
+					padding: 3.5rem 16rem;
+					font-size: 4.5em;
+				}
+			}
+		}
 	}
 }

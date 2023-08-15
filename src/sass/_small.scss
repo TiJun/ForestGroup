@@ -1,5 +1,5 @@
 @mixin small {
-    @media (max-width: 576px) {
+    @media (min-width: 576px) {
         .nav-mobile {
             .mobile-nav-list {
                 font-size: 1.5em;
