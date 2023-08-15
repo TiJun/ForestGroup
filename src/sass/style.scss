@@ -16,6 +16,10 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	color: #000;
 }
+.cta {
+	background-color: #2adf73;
+	box-shadow: 3px 2px 11px 2px #2adf73;
+}
 .padding {
 	padding: 2rem;
 	text-align: center;
@@ -336,7 +340,7 @@ body {
 		box-shadow: 3px 2px 11px 2px #ddd;
 		font-size: 2rem;
 		cursor: pointer;
-		transition: background-color 0.3s, box-shadow .3s;
+		transition: background-color 0.3s, box-shadow 0.3s;
 	}
 	&__box-two {
 		.offers-sub__button:hover {
@@ -349,10 +353,6 @@ body {
 		.offers-sub__button:hover {
 			background-color: #ddd;
 		}
-	}
-	.cta {
-		background-color: #2adf73;
-		box-shadow: 3px 2px 11px 2px #2adf73;
 	}
 	&__box-two {
 		.offers-sub__list-item:nth-of-type(3) {
@@ -370,6 +370,65 @@ body {
 		.offers-sub__list-item:nth-of-type(5) {
 			color: #000;
 		}
+	}
+}
+// CONTACT //
+.contact {
+	margin-top: 10rem;
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin: 0 2.5rem 0 2.5rem;
+		padding: 2.5rem;
+		box-shadow: 0 0 4px 0 #00000063;
+		border: 1px solid transparent;
+		border-radius: 6px;
+	}
+	&__heading {
+		font-size: 2rem;
+		font-weight: bold;
+		letter-spacing: 2px;
+		margin: 0.5rem 0;
+		text-align: center;
+	}
+	&__input {
+		box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.3882352941);
+		border: 1px solid transparent;
+		font-size: 2rem;
+		margin: 1rem 0;
+		padding: 1rem;
+		width: 100%;
+	}
+	&__checkbox {
+		cursor: pointer;
+		width: 1.8rem;
+		height: 1.8rem;
+		&-text {
+			font-size: 1.5rem;
+		}
+	}
+	.superscript {
+		color: red;
+		font-size: 1.5rem;
+	}
+	&__button {
+		border: 1px solid transparent;
+		border-radius: 10px;
+		cursor: pointer;
+		font-size: 2rem;
+		margin-top: 3rem;
+		padding: 1.5rem 3rem;
+		transition: background-color .3s, box-shadow .3s;
+	}
+	&__button:hover {
+		background-color: #23af5b;
+		box-shadow: 3px 2px 11px 2px #2adf73;
+	}
+	&__error {
+		font-size: 1.5rem;
+		color: red;
 	}
 }
 @include small;

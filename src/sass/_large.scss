@@ -187,5 +187,13 @@
 				}
 			}
 		}
+		.contact {
+			&__input {
+				width: 80%;
+			}
+			&__checkbox-text {
+				width: 80%;
+			}
+		}
 	}
 }
