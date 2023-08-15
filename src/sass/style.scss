@@ -226,7 +226,9 @@ body {
 		transition: box-shadow 0.3s;
 	}
 }
+// FOOTER //
 .footer {
+	bottom: 0;
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
@@ -273,6 +275,85 @@ body {
 		font-size: 1.5rem;
 		&-text {
 			padding: 1rem 0;
+		}
+	}
+}
+// OFFERS SUBPAGE //
+.offers-sub {
+	padding: 10rem 0 0 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	&__box-one, &__box-two, &__box-three {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin: 2rem 0;
+		padding: 3rem;
+		font-size: 2rem;
+		box-shadow: 0 0 4px 0 #00000063;
+		border: 1px solid transparent;
+		border-radius: 6px
+	}
+	&__heading {
+		padding: 1.5rem 0;
+		font-size: 2.5rem;
+		text-transform: uppercase;
+	}
+	&__price {
+		font-weight: bold;
+	}
+	&__list {
+		padding: 2rem 0;
+		list-style: none
+	}
+	&__list-item {
+		display: flex;
+		justify-content: center;
+		align-items: stretch;
+		span {
+			margin-right: 0.5rem;
+		}
+	}
+	&__list-item:nth-of-type(3) {
+		color: #ddd;
+	}
+	&__list-item:nth-of-type(4) {
+		color: #ddd;
+	}
+	&__list-item:nth-of-type(5) {
+		color: #ddd;
+	}
+	&__button {
+		padding: 1rem 2rem;
+		border: 1px solid transparent;
+		border-radius: 10px;
+		background-color: #fff;
+		box-shadow: 3px 2px 11px 2px #ddd;
+		font-size: 2rem;
+		cursor: pointer;
+	}
+	.cta {
+		background-color: #2adf73;
+		box-shadow: 3px 2px 11px 2px #2adf73;
+	}
+	&__box-two {
+		.offers-sub__list-item:nth-of-type(3) {
+			color: #000;
+		}
+	}
+	&__box-three {
+		.offers-sub__list-item:nth-of-type(3) {
+			padding: 0 2rem;
+			color: #000;
+		}
+		.offers-sub__list-item:nth-of-type(4) {
+			color: #000;
+		}
+		.offers-sub__list-item:nth-of-type(5) {
+			color: #000;
 		}
 	}
 }

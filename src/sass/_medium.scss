@@ -74,5 +74,16 @@
 				font-size: 2rem;
 			}
 		}
+		.offers-sub {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+			&__box-one, &__box-two {
+				margin: 0 2rem;
+				
+			}
+		}
 	}
 }

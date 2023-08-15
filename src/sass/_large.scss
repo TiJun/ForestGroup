@@ -179,5 +179,13 @@
 				}
 			}
 		}
+		.footer-sub {
+			.footer {
+				height: 32vh;
+				&__box {
+					margin: auto;
+				}
+			}
+		}
 	}
 }
