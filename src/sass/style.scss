@@ -285,7 +285,9 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	&__box-one, &__box-two, &__box-three {
+	&__box-one,
+	&__box-two,
+	&__box-three {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -295,7 +297,7 @@ body {
 		font-size: 2rem;
 		box-shadow: 0 0 4px 0 #00000063;
 		border: 1px solid transparent;
-		border-radius: 6px
+		border-radius: 6px;
 	}
 	&__heading {
 		padding: 1.5rem 0;
@@ -307,7 +309,7 @@ body {
 	}
 	&__list {
 		padding: 2rem 0;
-		list-style: none
+		list-style: none;
 	}
 	&__list-item {
 		display: flex;
@@ -334,6 +336,19 @@ body {
 		box-shadow: 3px 2px 11px 2px #ddd;
 		font-size: 2rem;
 		cursor: pointer;
+		transition: background-color 0.3s, box-shadow .3s;
+	}
+	&__box-two {
+		.offers-sub__button:hover {
+			background-color: #28ca69;
+			box-shadow: 3px 2px 11px 8px #2adf73;
+		}
+	}
+	&__box-one,
+	&__box-three {
+		.offers-sub__button:hover {
+			background-color: #ddd;
+		}
 	}
 	.cta {
 		background-color: #2adf73;
