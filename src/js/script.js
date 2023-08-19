@@ -44,6 +44,7 @@ const handleForm = () => {
 		nameError.textContent = ''
 		textError.textContent = ''
 		emailError.textContent = ''
+		checkboxError.textContent = 'Wymagana zgoda!'
 	} else if (
 		nameInput.value !== '' &&
 		emailInput.value === '' &&
@@ -129,6 +130,7 @@ const handleForm = () => {
 		nameInput.classList.add('error')
 		emailInput.classList.add('error')
 		textInput.classList.add('error')
+		checkboxError.textContent = ''
 	} else if (nameInput.value !== '' && emailInput.value === '' && textInput.value === '' && checkbox.checked === true) {
 		emailError.textContent = 'Pole musi być wypełnione!'
 		textError.textContent = 'Pole musi być wypełnione!'
@@ -136,6 +138,7 @@ const handleForm = () => {
 		textInput.classList.add('error')
 		nameInput.classList.remove('error')
 		nameError.textContent = ''
+		checkboxError.textContent = ''
 	} else if (nameInput.value === '' && emailInput.value !== '' && textInput.value === '' && checkbox.checked === true) {
 		nameError.textContent = 'Pole musi być wypełnione!'
 		textError.textContent = 'Pole musi być wypełnione!'
@@ -143,6 +146,7 @@ const handleForm = () => {
 		textInput.classList.add('error')
 		emailInput.classList.remove('error')
 		emailError.textContent = ''
+		checkboxError.textContent = ''
 	} else if (nameInput.value === '' && emailInput.value === '' && textInput.value !== '' && checkbox.checked === true) {
 		emailError.textContent = 'Pole musi być wypełnione!'
 		nameError.textContent = 'Pole musi być wypełnione!'
@@ -150,6 +154,7 @@ const handleForm = () => {
 		nameInput.classList.add('error')
 		textInput.classList.remove('error')
 		textError.textContent = ''
+		checkboxError.textContent = ''
 	} else if (nameInput.value !== '' && emailInput.value !== '' && textInput.value === '' && checkbox.checked === true) {
 		emailError.textContent = ''
 		textError.textContent = 'Pole musi być wypełnione!'
@@ -158,6 +163,7 @@ const handleForm = () => {
 		emailInput.classList.remove('error')
 		nameError.textContent = ''
 		emailError.textContent = ''
+		checkboxError.textContent = ''
 	} else if (nameInput.value === '' && emailInput.value !== '' && textInput.value !== '' && checkbox.checked === true) {
 		nameError.textContent = 'Pole musi być wypełnione!'
 		nameInput.classList.add('error')
@@ -165,6 +171,7 @@ const handleForm = () => {
 		textInput.classList.remove('error')
 		emailError.textContent = ''
 		textError.textContent = ''
+		checkboxError.textContent = ''
 	} else if (nameInput.value !== '' && emailInput.value === '' && textInput.value !== '' && checkbox.checked === true) {
 		emailError.textContent = 'Pole musi być wypełnione!'
 		emailInput.classList.add('error')
@@ -172,16 +179,27 @@ const handleForm = () => {
 		textInput.classList.remove('error')
 		nameError.textContent = ''
 		textError.textContent = ''
+		checkboxError.textContent = ''
+	} else if (nameInput.value !== '' && emailInput.value !== '' && textInput.value !== '' && checkbox.checked === true) {
+		nameError.textContent = ''
+		emailError.textContent = ''
+		textError.textContent = ''
+		nameInput.classList.remove('error')
+		emailInput.classList.remove('error')
+		textInput.classList.remove('error')
+		checkboxError.textContent = ''
 	}
 }
-const scrollSpy = () => {
-	if (window.scrollY >= 485 && window.scrollY <= 1105) {
-		aboutUs.classList.add('white-font')
-		aboutUs.parentNode.classList.add('black-bg')
-	}
+// const scrollSpy = () => {
+// 	if (window.scrollY >= 485 && window.scrollY <= 1105) {
+// 		aboutUs.classList.add('white-font')
+// 		aboutUs.parentNode.classList.add('black-bg')
+// 	}
+// }
+// window.addEventListener('scroll', scrollSpy)
+if (window.location.pathname === '/contact.html') {
+	sendBtn.addEventListener('click', handleForm)
 }
-window.addEventListener('scroll', scrollSpy)
-sendBtn.addEventListener('click', handleForm)
 burgerBtn.addEventListener('click', handleNav)
 allInputs.forEach(el =>
 	el.addEventListener('keypress', function (e) {
