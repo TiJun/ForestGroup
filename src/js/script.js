@@ -11,8 +11,7 @@ const sendBtn = document.querySelector('.contact__button')
 const checkbox = document.querySelector('.contact__checkbox')
 const checkboxError = document.querySelector('#checkbox-error')
 const allInputs = document.querySelectorAll('.contact__input')
-const home = document.querySelector('#home')
-const aboutUs = document.querySelector('#aboutus')
+const desktopNavList = document.querySelectorAll('.nav-desktop-list-item')
 const handleNav = () => {
 	burgerBtn.classList.toggle('is-active')
 	navMobile.classList.toggle('mobile-active')
@@ -23,7 +22,7 @@ listItems.forEach(el =>
 		navMobile.classList.remove('mobile-active')
 	})
 )
-const handleForm = () => {
+const handleForm = (e) => {
 	if (nameInput.value === '' && emailInput.value === '' && textInput.value === '' && checkbox.checked === false) {
 		nameError.textContent = 'Pole musi być wypełnione!'
 		emailError.textContent = 'Pole musi być wypełnione!'
@@ -190,13 +189,25 @@ const handleForm = () => {
 		checkboxError.textContent = ''
 	}
 }
-// const scrollSpy = () => {
-// 	if (window.scrollY >= 485 && window.scrollY <= 1105) {
-// 		aboutUs.classList.add('white-font')
-// 		aboutUs.parentNode.classList.add('black-bg')
-// 	}
-// }
-// window.addEventListener('scroll', scrollSpy)
+const scrollSpy = () => {
+	if (window.location.pathname === "/index.html" && window.scrollY >= 0 && window.scrollY <= 484) {
+		desktopNavList.item(0).firstChild.classList.add('scroll-spy')
+		desktopNavList.item(1).firstChild.classList.remove('scroll-spy')
+	}else if (window.location.pathname === "/index.html" && window.scrollY >= 485 && window.scrollY <= 1105) {
+		desktopNavList.item(0).firstChild.classList.remove('scroll-spy')
+		desktopNavList.item(1).firstChild.classList.add('scroll-spy')
+		desktopNavList.item(2).firstChild.classList.remove('scroll-spy')
+	}else if (window.location.pathname === "/index.html" && window.scrollY >= 1106) {
+		desktopNavList.item(1).firstChild.classList.remove('scroll-spy')
+		desktopNavList.item(2).firstChild.classList.add('scroll-spy')
+	}else if (window.location.pathname === "/offers.html") {
+		desktopNavList.item(2).firstChild.classList.add('scroll-spy')
+	}else if (window.location.pathname === "/contact.html") {
+		desktopNavList.item(3).firstChild.classList.add('scroll-spy')
+	}
+}
+document.addEventListener('DOMContentLoaded', scrollSpy)
+window.addEventListener('scroll', scrollSpy)
 if (window.location.pathname === '/contact.html') {
 	sendBtn.addEventListener('click', handleForm)
 }
