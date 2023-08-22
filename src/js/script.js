@@ -23,7 +23,8 @@ listItems.forEach(el =>
 	})
 )
 const handleForm = (e) => {
-	if (nameInput.value === '' && emailInput.value === '' && textInput.value === '' && checkbox.checked === false) {
+	const space = e.key === 32
+	if (nameInput.value.trim() === '' && emailInput.value.trim() === '' && textInput.value.trim() === '' && checkbox.checked === false) {
 		nameError.textContent = 'Pole musi być wypełnione!'
 		emailError.textContent = 'Pole musi być wypełnione!'
 		textError.textContent = 'Pole musi być wypełnione!'
@@ -32,9 +33,9 @@ const handleForm = (e) => {
 		textInput.classList.add('error')
 		checkboxError.textContent = 'Wymagana zgoda!'
 	} else if (
-		nameInput.value !== '' &&
-		emailInput.value !== '' &&
-		textInput.value !== '' &&
+		nameInput.value.trim() !== '' &&
+		emailInput.value.trim() !== '' &&
+		textInput.value.trim() !== '' &&
 		checkbox.checked === false
 	) {
 		nameInput.classList.remove('error')
@@ -45,9 +46,9 @@ const handleForm = (e) => {
 		emailError.textContent = ''
 		checkboxError.textContent = 'Wymagana zgoda!'
 	} else if (
-		nameInput.value !== '' &&
-		emailInput.value === '' &&
-		textInput.value === '' &&
+		nameInput.value.trim() !== '' &&
+		emailInput.value.trim() === '' &&
+		textInput.value.trim() === '' &&
 		checkbox.checked === false
 	) {
 		nameInput.classList.remove('error')
@@ -58,9 +59,9 @@ const handleForm = (e) => {
 		textInput.classList.add('error')
 		checkboxError.textContent = 'Wymagana zgoda!'
 	} else if (
-		nameInput.value === '' &&
-		emailInput.value !== '' &&
-		textInput.value === '' &&
+		nameInput.value.trim() === '' &&
+		emailInput.value.trim() !== '' &&
+		textInput.value.trim() === '' &&
 		checkbox.checked === false
 	) {
 		nameError.textContent = 'Pole musi być wypełnione!'
@@ -71,9 +72,9 @@ const handleForm = (e) => {
 		emailError.textContent = ''
 		emailInput.classList.remove('error')
 	} else if (
-		nameInput.value === '' &&
-		emailInput.value === '' &&
-		textInput.value !== '' &&
+		nameInput.value.trim() === '' &&
+		emailInput.value.trim() === '' &&
+		textInput.value.trim() !== '' &&
 		checkbox.checked === false
 	) {
 		emailError.textContent = 'Pole musi być wypełnione!'
@@ -84,9 +85,9 @@ const handleForm = (e) => {
 		textError.textContent = ''
 		checkboxError.textContent = 'Wymagana zgoda!'
 	} else if (
-		nameInput.value !== '' &&
-		emailInput.value !== '' &&
-		textInput.value === '' &&
+		nameInput.value.trim() !== '' &&
+		emailInput.value.trim() !== '' &&
+		textInput.value.trim() === '' &&
 		checkbox.checked === false
 	) {
 		textError.textContent = 'Pole musi być wypełnione!'
@@ -97,9 +98,9 @@ const handleForm = (e) => {
 		nameError.textContent = ''
 		emailError.textContent = ''
 	} else if (
-		nameInput.value === '' &&
-		emailInput.value !== '' &&
-		textInput.value !== '' &&
+		nameInput.value.trim() === '' &&
+		emailInput.value.trim() !== '' &&
+		textInput.value.trim() !== '' &&
 		checkbox.checked === false
 	) {
 		nameError.textContent = 'Pole musi być wypełnione!'
@@ -110,9 +111,9 @@ const handleForm = (e) => {
 		emailError.textContent = ''
 		textError.textContent = ''
 	} else if (
-		nameInput.value !== '' &&
-		emailInput.value === '' &&
-		textInput.value !== '' &&
+		nameInput.value.trim() !== '' &&
+		emailInput.value.trim() === '' &&
+		textInput.value.trim() !== '' &&
 		checkbox.checked === false
 	) {
 		emailError.textContent = 'Pole musi być wypełnione!'
@@ -122,7 +123,7 @@ const handleForm = (e) => {
 		textInput.classList.remove('error')
 		nameError.textContent = ''
 		textError.textContent = ''
-	} else if (nameInput.value === '' && emailInput.value === '' && textInput.value === '' && checkbox.checked === true) {
+	} else if (nameInput.value.trim() === '' && emailInput.value.trim() === '' && textInput.value.trim() === '' && checkbox.checked === true) {
 		nameError.textContent = 'Pole musi być wypełnione!'
 		emailError.textContent = 'Pole musi być wypełnione!'
 		textError.textContent = 'Pole musi być wypełnione!'
@@ -130,7 +131,7 @@ const handleForm = (e) => {
 		emailInput.classList.add('error')
 		textInput.classList.add('error')
 		checkboxError.textContent = ''
-	} else if (nameInput.value !== '' && emailInput.value === '' && textInput.value === '' && checkbox.checked === true) {
+	} else if (nameInput.value.trim() !== '' && emailInput.value.trim() === '' && textInput.value.trim() === '' && checkbox.checked === true) {
 		emailError.textContent = 'Pole musi być wypełnione!'
 		textError.textContent = 'Pole musi być wypełnione!'
 		emailInput.classList.add('error')
@@ -138,7 +139,7 @@ const handleForm = (e) => {
 		nameInput.classList.remove('error')
 		nameError.textContent = ''
 		checkboxError.textContent = ''
-	} else if (nameInput.value === '' && emailInput.value !== '' && textInput.value === '' && checkbox.checked === true) {
+	} else if (nameInput.value.trim() === '' && emailInput.value.trim() !== '' && textInput.value.trim() === '' && checkbox.checked === true) {
 		nameError.textContent = 'Pole musi być wypełnione!'
 		textError.textContent = 'Pole musi być wypełnione!'
 		nameInput.classList.add('error')
@@ -146,7 +147,7 @@ const handleForm = (e) => {
 		emailInput.classList.remove('error')
 		emailError.textContent = ''
 		checkboxError.textContent = ''
-	} else if (nameInput.value === '' && emailInput.value === '' && textInput.value !== '' && checkbox.checked === true) {
+	} else if (nameInput.value.trim() === '' && emailInput.value.trim() === '' && textInput.value.trim() !== '' && checkbox.checked === true) {
 		emailError.textContent = 'Pole musi być wypełnione!'
 		nameError.textContent = 'Pole musi być wypełnione!'
 		emailInput.classList.add('error')
@@ -154,7 +155,7 @@ const handleForm = (e) => {
 		textInput.classList.remove('error')
 		textError.textContent = ''
 		checkboxError.textContent = ''
-	} else if (nameInput.value !== '' && emailInput.value !== '' && textInput.value === '' && checkbox.checked === true) {
+	} else if (nameInput.value.trim() !== '' && emailInput.value.trim() !== '' && textInput.value.trim() === '' && checkbox.checked === true) {
 		emailError.textContent = ''
 		textError.textContent = 'Pole musi być wypełnione!'
 		textInput.classList.add('error')
@@ -163,7 +164,7 @@ const handleForm = (e) => {
 		nameError.textContent = ''
 		emailError.textContent = ''
 		checkboxError.textContent = ''
-	} else if (nameInput.value === '' && emailInput.value !== '' && textInput.value !== '' && checkbox.checked === true) {
+	} else if (nameInput.value.trim() === '' && emailInput.value.trim() !== '' && textInput.value.trim() !== '' && checkbox.checked === true) {
 		nameError.textContent = 'Pole musi być wypełnione!'
 		nameInput.classList.add('error')
 		emailInput.classList.remove('error')
@@ -171,7 +172,7 @@ const handleForm = (e) => {
 		emailError.textContent = ''
 		textError.textContent = ''
 		checkboxError.textContent = ''
-	} else if (nameInput.value !== '' && emailInput.value === '' && textInput.value !== '' && checkbox.checked === true) {
+	} else if (nameInput.value.trim() !== '' && emailInput.value.trim() === '' && textInput.value.trim() !== '' && checkbox.checked === true) {
 		emailError.textContent = 'Pole musi być wypełnione!'
 		emailInput.classList.add('error')
 		nameInput.classList.remove('error')
@@ -179,7 +180,7 @@ const handleForm = (e) => {
 		nameError.textContent = ''
 		textError.textContent = ''
 		checkboxError.textContent = ''
-	} else if (nameInput.value !== '' && emailInput.value !== '' && textInput.value !== '' && checkbox.checked === true) {
+	} else if (nameInput.value.trim() !== '' && emailInput.value.trim() !== '' && textInput.value.trim() !== '' && checkbox.checked === true) {
 		nameError.textContent = ''
 		emailError.textContent = ''
 		textError.textContent = ''
