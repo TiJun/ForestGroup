@@ -151,8 +151,21 @@
 			}
 		}
 		.offers {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
 			&__btn:hover {
 				box-shadow: 3px 2px 11px 8px #2adf73;
+			}
+			&__box {
+				margin: 2rem;
+				&-container {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: row;
+				}
 			}
 		}
 		.footer {

@@ -231,10 +231,11 @@ body {
 	bottom: 0;
 	display: flex;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
 	flex-direction: column;
 	margin: 4rem 0 0 0;
 	background-color: #ddd;
+	text-align: center;
 	&__logo {
 		.nav-logo {
 			display: flex;
@@ -279,12 +280,14 @@ body {
 	}
 }
 // OFFERS SUBPAGE //
-.offers-sub {
-	padding: 10rem 0 0 0;
+.offers-sub, .offers {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	.heading {
+		font-size: 2.5rem;
+	}
 	.cta {
 		background-color: #2adf73;
 		box-shadow: 3px 2px 11px 2px #2adf73;

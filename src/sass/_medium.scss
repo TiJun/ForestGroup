@@ -53,10 +53,10 @@
 		.footer {
 			&__box {
 				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				flex-direction: row;
-				width: 90vw;
+			justify-content: center;
+			align-items: center;
+			flex-direction: row;
+			flex-wrap: wrap;
 			}
 			&__links {
 				display: flex;
@@ -72,6 +72,18 @@
 			}
 			&__heading {
 				font-size: 2rem;
+			}
+		}
+		.offers {
+			&__box {
+				margin: 0 2rem 2rem 2rem;
+			}
+			&__box-container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: row;
+				flex-wrap: wrap;
 			}
 		}
 		.offers-sub {
