@@ -222,4 +222,53 @@
 			}
 		}
 	}
+// 	.offers-sub {
+// 	&__container {
+// 		display: flex;
+// 		justify-content: center;
+// 		align-items: center;
+// 		flex-direction: column;
+// 	}
+// 	&__box {
+// 		width: 100rem;
+// 		height: 50rem;
+// 		&-one {
+// 			background-image: url(/dist/img/mountain-desktop.jpg);
+// 			background-size: cover;
+// 			background-position: center;
+// 		}
+// 		&-two {
+// 			background-image: url(/dist/img/kayak-desktop.jpg);
+// 			background-size: cover;
+// 			background-position: center;
+// 		}
+// 	}
+// 	&__text {
+// 		backdrop-filter: blur(8px);
+// 		background-color: #ffffff67;
+// 		display: flex;
+// 		justify-content: center;
+// 		align-items: center;
+// 		flex-direction: column;
+// 		font-size: 1.5rem;
+// 		margin: 0 8rem;
+// 		width: 21rem;
+// 		height: 100%;
+// 		.description {
+// 			padding: 2rem;
+// 		}
+// 		.offers__button {
+// 			background-color: #2adf73;
+// 			box-shadow: 4px 3px 18px 4px #2adf73;
+// 		}
+// 		.offers__button:hover {
+// 			box-shadow: 4px 3px 25px 8px #2adf73;
+// 		}
+// 	}
+// 	&__price {
+// 		font-weight: bold;
+// 		font-size: 2rem;
+// 		padding: 1rem 0 0 0;
+// 	}
+// }
 }

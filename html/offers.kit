@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,47 +13,38 @@
     <link rel="stylesheet" href="/dist/css/style.min.css">
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
+
 <body>
     <!-- @include 'nav.kit' -->
-<main class="offers-sub">
-    <div class="offers-sub__box-one">
-        <p class="offers-sub__heading">Demo</p>
-        <p class="offers-sub__price">$0</p>
-        <ul class="offers-sub__list">
-            <li class="offers-sub__list-item"><span><img src="/dist/img/check.svg" alt=""></span>opcja w pakiecie</li>
-            <li class="offers-sub__list-item"><span><img src="/dist/img/check.svg" alt=""></span>opcja w pakiecie</li>
-            <li class="offers-sub__list-item"><span><img src="/dist/img/minus.svg" alt=""></span> opcja poza pakietem</li>
-            <li class="offers-sub__list-item"><span><img src="/dist/img/minus.svg" alt=""></span> opcja poza pakietem</li>
-            <li class="offers-sub__list-item"><span><img src="/dist/img/minus.svg" alt=""></span> opcja poza pakietem</li>
-        </ul>
-        <button class="offers-sub__button">Wybierz</button>
+    <div class="wrapper">
+        <main class="offers-sub">
+            <div class="offers-sub__container">
+                <div class="offers-sub__box-one offers-sub__box">
+                    <div class="offers-sub__img"></div>
+                    <div class="offers-sub__text">
+                        <h3 class="offers-sub__heading">Wstęp na szlak górski</h3>
+                        <p class="offers-sub__price">$200</p>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus harum
+                            veritatis blanditiis nulla quia aliquid natus incidunt corrupti, modi dolor.</p>
+                        <button class="offers__button">Wybierz</button>
+                    </div>
+                </div>
+                <div class="offers-sub__box-two offers-sub__box">
+                    <div class="offers-sub__img">
+                    </div>
+                    <div class="offers-sub__text">
+                        <h3 class="offers-sub__heading">Spływ kajakowy</h3>
+                        <p class="offers-sub__price">$400</p>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus harum
+                            veritatis blanditiis nulla quia aliquid natus incidunt corrupti, modi dolor.</p>
+                        <button class="offers__button">Wybierz</button>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
-    <div class="offers-sub__box-two">
-        <p class="offers-sub__heading">Standard</p>
-        <p class="offers-sub__price">$99</p>
-        <ul class="offers-sub__list">
-            <li class="offers-sub__list-item"><span><img src="/dist/img/check.svg" alt=""></span>opcja w pakiecie</li>
-            <li class="offers-sub__list-item"><span><img src="/dist/img/check.svg" alt=""></span>opcja w pakiecie</li>
-            <li class="offers-sub__list-item"><span><img src="/dist/img/check.svg" alt=""></span> opcja w pakiecie</li>
-            <li class="offers-sub__list-item"><span><img src="/dist/img/minus.svg" alt=""></span> opcja poza pakietem</li>
-            <li class="offers-sub__list-item"><span><img src="/dist/img/minus.svg" alt=""></span> opcja poza pakietem</li>
-        </ul>
-        <button class="offers-sub__button cta">Wybierz</button>
-    </div>
-    <div class="offers-sub__box-three">
-        <p class="offers-sub__heading">Premium</p>
-        <p class="offers-sub__price">$299</p>
-        <ul class="offers-sub__list">
-            <li class="offers-sub__list-item"><span><img src="/dist/img/check.svg" alt=""></span>opcja w pakiecie</li>
-            <li class="offers-sub__list-item"><span><img src="/dist/img/check.svg" alt=""></span>opcja w pakiecie</li>
-            <li class="offers-sub__list-item"><span><img src="/dist/img/check.svg" alt=""></span> opcja w pakiecie</li>
-            <li class="offers-sub__list-item"><span><img src="/dist/img/check.svg" alt=""></span> opcja w pakiecie</li>
-            <li class="offers-sub__list-item"><span><img src="/dist/img/check.svg" alt=""></span> opcja w pakiecie</li>
-        </ul>
-        <button class="offers-sub__button">Wybierz</button>
-    </div>
-</main>
     <div class="footer-sub"><!-- @include 'footer.kit' --></div>
     <script src="/dist/js/script.min.js"></script>
 </body>
+
 </html>
