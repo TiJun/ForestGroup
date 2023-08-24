@@ -86,14 +86,80 @@
 				flex-wrap: wrap;
 			}
 		}
+		.footer-sub {
+			.footer-offers {
+				height: 32vh;
+				margin: -12.5rem 0;
+				&__box {
+					margin: auto;
+				}
+			}
+		}
+		.contact {
+			&__input {
+				width: 80%;
+			}
+			&__checkbox-text {
+				width: 80%;
+			}
+		}
 		.offers-sub {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: row;
-			flex-wrap: wrap;
-			&__box-one, &__box-two {
-				margin: 10rem 2rem 0 2rem;
+			&__container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: row;
+			}
+			&__box {
+				width: 60rem;
+				height: 40rem;
+				.offers-sub__img {
+					display: none;
+				}
+				&-one {
+					align-items: flex-end;
+					background-image: url(/dist/img/mountain-desktop.jpg);
+					background-size: cover;
+					background-position: center;
+					margin: 0 1rem 0 0;
+				}
+				&-two {
+					align-items: flex-end;
+					background-image: url(/dist/img/kayak-desktop.jpg);
+					background-size: cover;
+					background-position: center;
+					margin: 0;
+				}
+			}
+			&__text {
+				backdrop-filter: blur(8px);
+				background-color: #ffffff67;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				font-size: 1.5rem;
+				width: 21rem;
+				height: 100%;
+				margin-top: 0;
+				.description {
+					padding: 2rem;
+				}
+				.offers__button {
+					background-color: #2adf73;
+					box-shadow: 4px 3px 18px 4px #2adf73;
+				}
+				.offers__button:hover {
+					box-shadow: 4px 3px 25px 8px #2adf73;
+				}
+			}
+			&__price {
+				font-weight: bold;
+				font-size: 2rem;
+				padding: 1rem 0 0 0;
+			}
+			.offers__button {
+				font-size: 1.5rem;
 			}
 		}
 	}
