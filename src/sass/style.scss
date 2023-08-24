@@ -16,9 +16,6 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	color: #000;
 }
-#map {
-	height: 100%;
-}
 .padding {
 	padding: 2rem;
 	text-align: center;
@@ -439,6 +436,7 @@ body {
 		font-size: 1.5rem;
 		height: 100%;
 		margin-top: 30rem;
+		box-shadow: 4px 3px 18px 4px #ddd;
 		.offers__button {
 			background-color: #2adf73;
 			box-shadow: 4px 3px 18px 4px #2adf73;
@@ -462,6 +460,13 @@ body {
 // CONTACT //
 .contact {
 	margin-top: 10rem;
+	#map {
+		iframe {
+			display: 100%;
+			width: 100%;
+			padding: 2rem;
+		}
+	}
 	.cta {
 		background-color: #2adf73;
 		box-shadow: 3px 2px 11px 2px #2adf73;
