@@ -22,8 +22,7 @@ listItems.forEach(el =>
 		navMobile.classList.remove('mobile-active')
 	})
 )
-const handleForm = e => {
-	const space = e.key === 32
+const handleForm = () => {
 	if (
 		nameInput.value.trim() === '' &&
 		emailInput.value.trim() === '' &&
@@ -260,14 +259,14 @@ document.addEventListener('DOMContentLoaded', scrollSpy)
 window.addEventListener('scroll', scrollSpy)
 if (window.location.pathname.endsWith('contact.html') === true) {
 	sendBtn.addEventListener('click', handleForm)
-	allInputs.forEach(el =>
-		el.addEventListener('keypress', function (e) {
-			if (e.key === 'Enter') {
-				handleForm()
-			}
-		})
-	)
 }
+allInputs.forEach(el =>
+	el.addEventListener('keypress', function (e) {
+		if (e.key === 'Enter') {
+			handleForm()
+		}
+	})
+)
 burgerBtn.addEventListener('click', handleNav)
 
 feather.replace()
