@@ -209,7 +209,7 @@ const scrollSpy = () => {
 }
 document.addEventListener('DOMContentLoaded', scrollSpy)
 window.addEventListener('scroll', scrollSpy)
-if (window.location.pathname === '/contact.html') {
+if (window.location.pathname === '/ForestGroup/contact.htmll') {
 	sendBtn.addEventListener('click', handleForm)
 }
 burgerBtn.addEventListener('click', handleNav)
