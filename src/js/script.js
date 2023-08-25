@@ -191,25 +191,25 @@ const handleForm = (e) => {
 	}
 }
 const scrollSpy = () => {
-	if (window.location.pathname === "/ForestGroup/index.html" && window.scrollY >= 0 && window.scrollY <= 484) {
+	if (window.location.pathname.endsWith("/index.html") === true && window.scrollY >= 0 && window.scrollY <= 484) {
 		desktopNavList.item(0).firstChild.classList.add('scroll-spy')
 		desktopNavList.item(1).firstChild.classList.remove('scroll-spy')
-	}else if (window.location.pathname === "/ForestGroup/index.html" && window.scrollY >= 485 && window.scrollY <= 1105) {
+	}else if (window.location.pathname.endsWith("/index.html") === true && window.scrollY >= 485 && window.scrollY <= 1105) {
 		desktopNavList.item(0).firstChild.classList.remove('scroll-spy')
 		desktopNavList.item(1).firstChild.classList.add('scroll-spy')
 		desktopNavList.item(2).firstChild.classList.remove('scroll-spy')
-	}else if (window.location.pathname === "/ForestGroup/index.html" && window.scrollY >= 1106) {
+	}else if (window.location.pathname.endsWith("/index.html") === true && window.scrollY >= 1106) {
 		desktopNavList.item(1).firstChild.classList.remove('scroll-spy')
 		desktopNavList.item(2).firstChild.classList.add('scroll-spy')
-	}else if (window.location.pathname === "/ForestGroup/offers.html") {
+	}else if (window.location.pathname.endsWith('offers.html') === true) {
 		desktopNavList.item(2).firstChild.classList.add('scroll-spy')
-	}else if (window.location.pathname === "/ForestGroup/contact.html") {
+	}else if (window.location.pathname.endsWith('contact.html') === true) {
 		desktopNavList.item(3).firstChild.classList.add('scroll-spy')
 	}
 }
 document.addEventListener('DOMContentLoaded', scrollSpy)
 window.addEventListener('scroll', scrollSpy)
-if (window.location.pathname === '/ForestGroup/contact.html') {
+if (window.location.pathname.endsWith('contact.html') === true) {
 	sendBtn.addEventListener('click', handleForm)
 }
 burgerBtn.addEventListener('click', handleNav)
