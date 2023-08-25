@@ -22,9 +22,14 @@ listItems.forEach(el =>
 		navMobile.classList.remove('mobile-active')
 	})
 )
-const handleForm = (e) => {
+const handleForm = e => {
 	const space = e.key === 32
-	if (nameInput.value.trim() === '' && emailInput.value.trim() === '' && textInput.value.trim() === '' && checkbox.checked === false) {
+	if (
+		nameInput.value.trim() === '' &&
+		emailInput.value.trim() === '' &&
+		textInput.value.trim() === '' &&
+		checkbox.checked === false
+	) {
 		nameError.textContent = 'Pole musi być wypełnione!'
 		emailError.textContent = 'Pole musi być wypełnione!'
 		textError.textContent = 'Pole musi być wypełnione!'
@@ -123,7 +128,12 @@ const handleForm = (e) => {
 		textInput.classList.remove('error')
 		nameError.textContent = ''
 		textError.textContent = ''
-	} else if (nameInput.value.trim() === '' && emailInput.value.trim() === '' && textInput.value.trim() === '' && checkbox.checked === true) {
+	} else if (
+		nameInput.value.trim() === '' &&
+		emailInput.value.trim() === '' &&
+		textInput.value.trim() === '' &&
+		checkbox.checked === true
+	) {
 		nameError.textContent = 'Pole musi być wypełnione!'
 		emailError.textContent = 'Pole musi być wypełnione!'
 		textError.textContent = 'Pole musi być wypełnione!'
@@ -131,7 +141,12 @@ const handleForm = (e) => {
 		emailInput.classList.add('error')
 		textInput.classList.add('error')
 		checkboxError.textContent = ''
-	} else if (nameInput.value.trim() !== '' && emailInput.value.trim() === '' && textInput.value.trim() === '' && checkbox.checked === true) {
+	} else if (
+		nameInput.value.trim() !== '' &&
+		emailInput.value.trim() === '' &&
+		textInput.value.trim() === '' &&
+		checkbox.checked === true
+	) {
 		emailError.textContent = 'Pole musi być wypełnione!'
 		textError.textContent = 'Pole musi być wypełnione!'
 		emailInput.classList.add('error')
@@ -139,7 +154,12 @@ const handleForm = (e) => {
 		nameInput.classList.remove('error')
 		nameError.textContent = ''
 		checkboxError.textContent = ''
-	} else if (nameInput.value.trim() === '' && emailInput.value.trim() !== '' && textInput.value.trim() === '' && checkbox.checked === true) {
+	} else if (
+		nameInput.value.trim() === '' &&
+		emailInput.value.trim() !== '' &&
+		textInput.value.trim() === '' &&
+		checkbox.checked === true
+	) {
 		nameError.textContent = 'Pole musi być wypełnione!'
 		textError.textContent = 'Pole musi być wypełnione!'
 		nameInput.classList.add('error')
@@ -147,7 +167,12 @@ const handleForm = (e) => {
 		emailInput.classList.remove('error')
 		emailError.textContent = ''
 		checkboxError.textContent = ''
-	} else if (nameInput.value.trim() === '' && emailInput.value.trim() === '' && textInput.value.trim() !== '' && checkbox.checked === true) {
+	} else if (
+		nameInput.value.trim() === '' &&
+		emailInput.value.trim() === '' &&
+		textInput.value.trim() !== '' &&
+		checkbox.checked === true
+	) {
 		emailError.textContent = 'Pole musi być wypełnione!'
 		nameError.textContent = 'Pole musi być wypełnione!'
 		emailInput.classList.add('error')
@@ -155,7 +180,12 @@ const handleForm = (e) => {
 		textInput.classList.remove('error')
 		textError.textContent = ''
 		checkboxError.textContent = ''
-	} else if (nameInput.value.trim() !== '' && emailInput.value.trim() !== '' && textInput.value.trim() === '' && checkbox.checked === true) {
+	} else if (
+		nameInput.value.trim() !== '' &&
+		emailInput.value.trim() !== '' &&
+		textInput.value.trim() === '' &&
+		checkbox.checked === true
+	) {
 		emailError.textContent = ''
 		textError.textContent = 'Pole musi być wypełnione!'
 		textInput.classList.add('error')
@@ -164,7 +194,12 @@ const handleForm = (e) => {
 		nameError.textContent = ''
 		emailError.textContent = ''
 		checkboxError.textContent = ''
-	} else if (nameInput.value.trim() === '' && emailInput.value.trim() !== '' && textInput.value.trim() !== '' && checkbox.checked === true) {
+	} else if (
+		nameInput.value.trim() === '' &&
+		emailInput.value.trim() !== '' &&
+		textInput.value.trim() !== '' &&
+		checkbox.checked === true
+	) {
 		nameError.textContent = 'Pole musi być wypełnione!'
 		nameInput.classList.add('error')
 		emailInput.classList.remove('error')
@@ -172,7 +207,12 @@ const handleForm = (e) => {
 		emailError.textContent = ''
 		textError.textContent = ''
 		checkboxError.textContent = ''
-	} else if (nameInput.value.trim() !== '' && emailInput.value.trim() === '' && textInput.value.trim() !== '' && checkbox.checked === true) {
+	} else if (
+		nameInput.value.trim() !== '' &&
+		emailInput.value.trim() === '' &&
+		textInput.value.trim() !== '' &&
+		checkbox.checked === true
+	) {
 		emailError.textContent = 'Pole musi być wypełnione!'
 		emailInput.classList.add('error')
 		nameInput.classList.remove('error')
@@ -180,7 +220,12 @@ const handleForm = (e) => {
 		nameError.textContent = ''
 		textError.textContent = ''
 		checkboxError.textContent = ''
-	} else if (nameInput.value.trim() !== '' && emailInput.value.trim() !== '' && textInput.value.trim() !== '' && checkbox.checked === true) {
+	} else if (
+		nameInput.value.trim() !== '' &&
+		emailInput.value.trim() !== '' &&
+		textInput.value.trim() !== '' &&
+		checkbox.checked === true
+	) {
 		nameError.textContent = ''
 		emailError.textContent = ''
 		textError.textContent = ''
@@ -191,19 +236,23 @@ const handleForm = (e) => {
 	}
 }
 const scrollSpy = () => {
-	if (window.location.pathname.endsWith("/index.html") === true && window.scrollY >= 0 && window.scrollY <= 484) {
+	if (window.location.pathname.endsWith('/index.html') === true && window.scrollY >= 0 && window.scrollY <= 484) {
 		desktopNavList.item(0).firstChild.classList.add('scroll-spy')
 		desktopNavList.item(1).firstChild.classList.remove('scroll-spy')
-	}else if (window.location.pathname.endsWith("/index.html") === true && window.scrollY >= 485 && window.scrollY <= 1105) {
+	} else if (
+		window.location.pathname.endsWith('/index.html') === true &&
+		window.scrollY >= 485 &&
+		window.scrollY <= 1105
+	) {
 		desktopNavList.item(0).firstChild.classList.remove('scroll-spy')
 		desktopNavList.item(1).firstChild.classList.add('scroll-spy')
 		desktopNavList.item(2).firstChild.classList.remove('scroll-spy')
-	}else if (window.location.pathname.endsWith("/index.html") === true && window.scrollY >= 1106) {
+	} else if (window.location.pathname.endsWith('/index.html') === true && window.scrollY >= 1106) {
 		desktopNavList.item(1).firstChild.classList.remove('scroll-spy')
 		desktopNavList.item(2).firstChild.classList.add('scroll-spy')
-	}else if (window.location.pathname.endsWith('offers.html') === true) {
+	} else if (window.location.pathname.endsWith('offers.html') === true) {
 		desktopNavList.item(2).firstChild.classList.add('scroll-spy')
-	}else if (window.location.pathname.endsWith('contact.html') === true) {
+	} else if (window.location.pathname.endsWith('contact.html') === true) {
 		desktopNavList.item(3).firstChild.classList.add('scroll-spy')
 	}
 }
@@ -211,13 +260,14 @@ document.addEventListener('DOMContentLoaded', scrollSpy)
 window.addEventListener('scroll', scrollSpy)
 if (window.location.pathname.endsWith('contact.html') === true) {
 	sendBtn.addEventListener('click', handleForm)
+	allInputs.forEach(el =>
+		el.addEventListener('keypress', function (e) {
+			if (e.key === 'Enter') {
+				handleForm()
+			}
+		})
+	)
 }
 burgerBtn.addEventListener('click', handleNav)
-allInputs.forEach(el =>
-	el.addEventListener('keypress', function (e) {
-		if (e.key === 'Enter') {
-			handleForm()
-		}
-	})
-)
+
 feather.replace()
