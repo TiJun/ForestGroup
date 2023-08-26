@@ -75,7 +75,6 @@ const handleForm = () => {
 		checkboxError.textContent = 'Wymagana zgoda!'
 		emailError.textContent = ''
 		emailInput.classList.remove('error')
-		emailCheck()
 	} else if (
 		nameInput.value.trim() === '' &&
 		emailInput.value.trim() === '' &&
@@ -233,24 +232,24 @@ const handleForm = () => {
 		emailInput.classList.remove('error')
 		textInput.classList.remove('error')
 		checkboxError.textContent = ''
-		alert('wiadomość wysłana!')
-		emailInput.value =''
+		alert('Wiadomość wysłana!')
+		emailInput.value = ''
 		textInput.value = ''
 		nameInput.value = ''
 	}
 }
 const emailCheck = () => {
-	const regex = new RegExp('[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)+[.]+[a-z]{3,5}$')
+	const regex = new RegExp('[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9]+(?:.[a-zA-Z0-9-]+)+[.]+[a-z]{3,5}$')
 	if (regex.test(emailInput.value) === false) {
-		emailError.textContent = "Niepoprawny adres email"
-	}else {
-		emailError.textContent = ''
+		emailError.textContent = 'Niepoprawny adres email'
 		emailInput.classList.add('error')
+	} else {
+		emailError.textContent = ''
+		emailInput.classList.remove('error')
+		handleForm()
+		return
 	}
 }
-emailInput.addEventListener('input', () => {
-	const regex = new RegExp('[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)+[.]+[a-z]{3,5}$')
-})
 const scrollSpy = () => {
 	if (window.location.pathname.endsWith('/index.html') === true && window.scrollY >= 0 && window.scrollY <= 484) {
 		desktopNavList.item(0).firstChild.classList.add('scroll-spy')
@@ -275,15 +274,17 @@ const scrollSpy = () => {
 document.addEventListener('DOMContentLoaded', scrollSpy)
 window.addEventListener('scroll', scrollSpy)
 if (window.location.pathname.endsWith('contact.html') === true) {
-	sendBtn.addEventListener('click', handleForm)
+	sendBtn.addEventListener('click', emailCheck)
+	emailInput.addEventListener('input', () => {
+		const regex = new RegExp('[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9]+(?:.[a-zA-Z0-9-]+)+[.]+[a-z]{3,5}$')
+	})
 }
 allInputs.forEach(el =>
 	el.addEventListener('keypress', function (e) {
 		if (e.key === 'Enter') {
-			handleForm()
+			emailCheck()
 		}
 	})
 )
 burgerBtn.addEventListener('click', handleNav)
-
 feather.replace()
