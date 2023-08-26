@@ -11,6 +11,7 @@ const sendBtn = document.querySelector('.contact__button')
 const checkbox = document.querySelector('.contact__checkbox')
 const checkboxError = document.querySelector('#checkbox-error')
 const allInputs = document.querySelectorAll('.contact__input')
+const date = document.querySelector('.footer__year')
 const desktopNavList = document.querySelectorAll('.nav-desktop-list-item')
 const handleNav = () => {
 	burgerBtn.classList.toggle('is-active')
@@ -236,6 +237,7 @@ const handleForm = () => {
 		emailInput.value = ''
 		textInput.value = ''
 		nameInput.value = ''
+		checkbox.checked = false
 	}
 }
 const emailCheck = () => {
@@ -247,9 +249,13 @@ const emailCheck = () => {
 		emailError.textContent = ''
 		emailInput.classList.remove('error')
 		handleForm()
-		return
 	}
 }
+const handleCurrentYear = () => {
+    const year = (new Date).getFullYear();
+    date.innerText = year;
+}
+handleCurrentYear()
 const scrollSpy = () => {
 	if (window.location.pathname.endsWith('/index.html') === true && window.scrollY >= 0 && window.scrollY <= 484) {
 		desktopNavList.item(0).firstChild.classList.add('scroll-spy')
