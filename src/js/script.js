@@ -241,7 +241,7 @@ const handleForm = () => {
 	}
 }
 const emailCheck = () => {
-	const regex = new RegExp('[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9]+(?:.[a-zA-Z0-9-]+)+[.]+[a-z]{3,5}$')
+	const regex = new RegExp('[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9]+(?:.[a-zA-Z0-9-]+)+[.]+[a-z]{2,3}$')
 	if (regex.test(emailInput.value) === false) {
 		emailError.textContent = 'Niepoprawny adres email'
 		emailInput.classList.add('error')
@@ -252,8 +252,8 @@ const emailCheck = () => {
 	}
 }
 const handleCurrentYear = () => {
-    const year = (new Date).getFullYear();
-    date.innerText = year;
+	const year = new Date().getFullYear()
+	date.innerText = year
 }
 handleCurrentYear()
 const scrollSpy = () => {
@@ -281,9 +281,6 @@ document.addEventListener('DOMContentLoaded', scrollSpy)
 window.addEventListener('scroll', scrollSpy)
 if (window.location.pathname.endsWith('contact.html') === true) {
 	sendBtn.addEventListener('click', emailCheck)
-	emailInput.addEventListener('input', () => {
-		const regex = new RegExp('[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9]+(?:.[a-zA-Z0-9-]+)+[.]+[a-z]{3,5}$')
-	})
 }
 allInputs.forEach(el =>
 	el.addEventListener('keypress', function (e) {
