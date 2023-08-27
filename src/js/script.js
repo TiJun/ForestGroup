@@ -241,11 +241,20 @@ const handleForm = () => {
 	}
 }
 const emailCheck = () => {
-	const regex = new RegExp('[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9]+(?:.[a-zA-Z0-9-]+)+[.]+[a-z]{2,3}$')
-	if (regex.test(emailInput.value) === false) {
+	const emailRegex = new RegExp('[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9]+(?:.[a-zA-Z0-9-]+)+[.]+[a-z]{2,3}$')
+	const nameRegex = new RegExp('[.]')
+	if (emailRegex.test(emailInput.value) === false && nameRegex.test(nameInput.value) === true) {
 		emailError.textContent = 'Niepoprawny adres email'
+		nameError.textContent = 'Imię zawiera niepoprawne znaki!'
 		emailInput.classList.add('error')
-	} else {
+		nameInput.classList.add('error')
+	}else if (emailRegex.test(emailInput.value) === true && nameRegex.test(nameInput.value) === true) {
+		emailInput.classList.remove('error')
+		nameInput.classList.add('error')
+		nameError.textContent = 'Imię zawiera niepoprawne znaki!'
+		emailError.textContent = ''
+	}
+	 else {
 		emailError.textContent = ''
 		emailInput.classList.remove('error')
 		handleForm()
