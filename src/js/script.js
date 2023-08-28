@@ -248,13 +248,12 @@ const emailCheck = () => {
 		nameError.textContent = 'Imię zawiera niepoprawne znaki!'
 		emailInput.classList.add('error')
 		nameInput.classList.add('error')
-	}else if (emailRegex.test(emailInput.value) === true && nameRegex.test(nameInput.value) === true) {
+	} else if (emailRegex.test(emailInput.value) === true && nameRegex.test(nameInput.value) === true) {
 		emailInput.classList.remove('error')
 		nameInput.classList.add('error')
 		nameError.textContent = 'Imię zawiera niepoprawne znaki!'
 		emailError.textContent = ''
-	}
-	 else {
+	} else {
 		emailError.textContent = ''
 		emailInput.classList.remove('error')
 		handleForm()
@@ -286,8 +285,6 @@ const scrollSpy = () => {
 		desktopNavList.item(3).firstChild.classList.add('scroll-spy')
 	}
 }
-document.addEventListener('DOMContentLoaded', scrollSpy)
-window.addEventListener('scroll', scrollSpy)
 if (window.location.pathname.endsWith('contact.html') === true) {
 	sendBtn.addEventListener('click', emailCheck)
 }
@@ -300,3 +297,5 @@ allInputs.forEach(el =>
 )
 burgerBtn.addEventListener('click', handleNav)
 feather.replace()
+window.addEventListener('scroll', scrollSpy)
+document.addEventListener('DOMContentLoaded', scrollSpy)
