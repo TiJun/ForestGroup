@@ -13,6 +13,7 @@ const checkboxError = document.querySelector('#checkbox-error')
 const allInputs = document.querySelectorAll('.contact__input')
 const date = document.querySelector('.footer__year')
 const desktopNavList = document.querySelectorAll('.nav-desktop-list-item')
+const allLabels = document.querySelectorAll('.contact__label')
 const handleNav = () => {
 	burgerBtn.classList.toggle('is-active')
 	navMobile.classList.toggle('mobile-active')
@@ -299,3 +300,12 @@ burgerBtn.addEventListener('click', handleNav)
 feather.replace()
 window.addEventListener('scroll', scrollSpy)
 document.addEventListener('DOMContentLoaded', scrollSpy)
+nameInput.addEventListener('click', () => {
+	allLabels[0].classList.add('fade-up')
+})
+emailInput.addEventListener('click', () => {
+	allLabels[1].classList.add('fade-up')
+})
+textInput.addEventListener('click', () => {
+	allLabels[2].classList.add('fade-up')
+})
