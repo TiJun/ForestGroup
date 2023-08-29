@@ -374,6 +374,7 @@ body {
 	&__logo {
 		.nav-logo {
 			display: flex;
+			font-weight: normal;
 			justify-content: center;
 			align-items: center;
 			.logo-img {
@@ -506,9 +507,6 @@ body {
 		flex-direction: column;
 		margin: 0 2.5rem 0 2.5rem;
 		padding: 2.5rem;
-		box-shadow: 0 0 4px 0 #00000063;
-		border: 1px solid transparent;
-		border-radius: 6px;
 	}
 	&__heading {
 		font-size: 2rem;
@@ -531,8 +529,15 @@ body {
 		cursor: pointer;
 		width: 1.8rem;
 		height: 1.8rem;
+		margin-left: 1.5rem;
 		&-text {
 			font-size: 1.5rem;
+			padding: 0 1rem;
+		}
+		&-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 	.superscript {
@@ -540,6 +545,7 @@ body {
 		font-size: 1.5rem;
 	}
 	&__button {
+		position: relative;
 		border: 1px solid transparent;
 		border-radius: 10px;
 		cursor: pointer;
@@ -547,10 +553,23 @@ body {
 		margin-top: 3rem;
 		padding: 1.5rem 3rem;
 		transition: background-color 0.3s, box-shadow 0.3s;
+		overflow: hidden;
+		z-index: 0;
 	}
-	&__button:hover {
-		background-color: #23af5b;
-		box-shadow: 3px 2px 11px 2px #2adf73;
+	&__button::before {
+		content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			height: 100%;
+			width: 0;
+			background-color: #17be5a;
+			z-index: -1;
+			transition: width 0.5s;
+	}
+	&__button:hover::before {
+		width: 100%;
 	}
 	&__error {
 		font-size: 1.5rem;

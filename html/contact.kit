@@ -21,19 +21,24 @@
         <form id="contact" class="contact">
             <div class="contact__container">
                 <p class="contact__heading">Formularz kontaktowy</p>
-                <input type="text" placeholder="Imię i nazwisko" id="name-input" class="contact__input">
+                <input type="text" id="name-input" class="contact__input">
                 <p id="name-error" class="contact__error"></p>
-                <input type="text" placeholder="e-mail" id="email-input" class="contact__input">
+                <label for="email" class="contact__label">E-mail</label>
+                <input type="text"id="email-input" class="contact__input">
                 <p id="email-error" class="contact__error"></p>
-                <textarea class="contact__input" id="text-input" name="" placeholder="Treść wiadomości" id="" cols="21"
+                <label for="message" class="contact__label">Treść wiadomości</label>
+                <textarea class="contact__input" id="text-input" name="" id="" cols="21"
                     rows="7"></textarea>
                 <p id="text-error" class="contact__error"></p>
-                <input class="contact__checkbox" type="checkbox" name="" id="">
-                <p class="contact__checkbox-text">
-                    <span class="superscript">*</span> Wyrażam
-                    zgodę na przetwarzanie moich danych osobowych w celu kontaktu w związku ze złożonym zapytaniem lub
-                    zgłoszeniem przesłanym przez formularz kontaktowy.
-                </p>
+                <div class="contact__checkbox-container">
+                    <input class="contact__checkbox" type="checkbox" name="" id="">
+                    <p class="contact__checkbox-text">
+                        <span class="superscript">*</span> Wyrażam
+                        zgodę na przetwarzanie moich danych osobowych w celu kontaktu w związku ze złożonym zapytaniem
+                        lub
+                        zgłoszeniem przesłanym przez formularz kontaktowy.
+                    </p>
+                </div>
                 <p id="checkbox-error" class="contact__error"></p>
                 <p class="contact__required"><span class="superscript">*</span>Pole wymagane</p>
                 <button class="contact__button cta">Wyślij</button>
