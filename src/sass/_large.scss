@@ -143,10 +143,16 @@
 			padding: 8rem 0 2rem 0;
 			&__hero-img {
 				height: 40vh;
+				width: 100vw;
+				margin-left: calc(50% - 50vw);
 				background-image: url(../../dist/img/girl-desktop.jpg);
 			}
+			&__hero-bg {
+				width: 100vw;
+				margin-left: calc(50% - 50vw);
+			}
 			&__text {
-				width: 50%;
+				width: 100%;
 				padding: 3.5rem 16rem;
 				font-size: 4.5em;
 			}
