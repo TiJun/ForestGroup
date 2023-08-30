@@ -526,11 +526,6 @@ body {
 	&__label {
 		background-color: white;
 		font-size: 1.7rem;
-		position: absolute;
-		left: 0;
-		z-index: 1;
-		margin: 2rem 1rem;
-		transition: margin .3s;
 	}
 	&__input {
 		position: relative;
